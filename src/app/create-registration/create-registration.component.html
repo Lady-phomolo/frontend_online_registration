@@ -1,0 +1,35 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Create Registration</h3>
+    <form #regForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" required minlength="3" maxlength="10" id="first_name" [(ngModel)]="registration.first_name" name='first_name' #first_name="ngModel">
+            <small class="form-text text muted" *ngIf="first_name.touched && !first_name.valid">First Name required</small>
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" required minlength="3" maxlength="10" [(ngModel)]="registration.last_name" name='last_name' #last_name="ngModel">
+            <small class="form-text text muted" *ngIf="last_name.touched && !last_name.valid">First Name required</small>
+
+        </div>
+
+        <div class="form-group">
+            <label>Id Number</label>
+            <input type="text" class="form-control" required minlength="13" #id_number="ngModel" maxlength="13" id="id_number" [(ngModel)]="registration.id_number" name='id_number'>
+            <small class="form-text text muted" *ngIf="id_number.touched && !id_number.valid">Enter 13 digits for ID Number </small>
+
+        </div>
+
+        <div class="form-group">
+            <label>Telephone</label>
+            <input type="text" class="form-control" required minlength="10" maxlength="13" #telephone="ngModel" id="telephone" [(ngModel)]="registration.telephone" name='telephone'>
+            <small class="form-text text muted" *ngIf="telephone.touched && !telephone.valid">Enter telephone numbers</small>
+
+        </div>
+        <br>
+        <button [disabled]="!regForm.valid" class="btn btn-success" type="submit">Submit</button>
+    </form>
+    <br>
+</div>

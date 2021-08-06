@@ -1,0 +1,23 @@
+<h2 class="text-center">Online Registration</h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Id Number</th>
+            <th>Telephone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let register of registration">
+            <td>{{register.reg_id}}</td>
+            <td>{{register.first_name}}</td>
+            <td>{{register.last_name}}</td>
+            <td>{{register.id_number}}</td>
+            <td>{{register.telephone}}</td>
+
+        </tr>
+    </tbody>
+</table>
