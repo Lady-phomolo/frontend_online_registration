@@ -5,10 +5,10 @@ import { OnlineregistrationListComponent } from './onlineregistration-list/onlin
 
 
 export const routes: Routes = [
-   
- { path:'registration-list', component: OnlineregistrationListComponent},
+  
  { path:'create-registration', component: CreateRegistrationComponent},
- { path:'', redirectTo: 'registration-list', pathMatch:'full'},
+ { path:'registration-list', component: OnlineregistrationListComponent},
+ { path:'', redirectTo: 'create-registration', pathMatch:'full'},
 ];
 
 

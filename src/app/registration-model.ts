@@ -1,5 +1,3 @@
-import { StringMapWithRename } from "@angular/compiler/src/compiler_facade_interface";
-
 export class RegistrationModel {
      reg_id:number;
      first_name:string;
